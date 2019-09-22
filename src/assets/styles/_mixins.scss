@@ -1,0 +1,32 @@
+$screen-md: 420px;
+
+$screen-lg: 720px;
+
+$screen-desktop: 992px;
+
+// 420px
+@mixin phone {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+// 768px
+@mixin tablet {
+	@media (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+// 992px
+@mixin desktop {
+	@media (min-width: #{$screen-desktop}) {
+		@content;
+	}
+}
+
+@mixin min-screen-width($screen) {
+	@media (min-width: $screen + 'px') {
+		@content;
+	}
+}

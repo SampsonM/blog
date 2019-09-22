@@ -1,0 +1,62 @@
+@keyframes homeIn {
+	0% { transform: translateY(-50vh) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes aboutIn {
+	0% { transform: translateY(100vh) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes aboutOutMobile {
+	0% { transform: translateY(-100vh) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes aboutOutTablet {
+	0% { transform: translateY(-100vh) }
+	100% { transform: translateY(0) }
+}
+
+// CARD 0
+@keyframes card0InMobile {
+	0% { transform: translateY(-480px) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes card0InTablet {
+	0% { transform: translateY(-280px) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes card0InDesktop {
+	0% { transform: translateX(-100px) }
+	100% { transform: translateX(0) }
+}
+
+// CARD 1
+@keyframes card1InMobile {
+	0% { transform: translateY(-360px) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes card1InTablet {
+	0% { transform: translateY(-160px) }
+	100% { transform: translateY(0) }
+}
+
+// CARD 2
+@keyframes card2InMobile {
+	0% { transform: translateY(-270px) }
+	100% { transform: translateY(0) }
+}
+
+@keyframes card2InTablet {
+	0% { transform: translateY(-70px) }
+	100% { transform: translatY(0) }
+}
+
+@keyframes card2InDesktop {
+	0% { transform: translateX(100px) }
+	100% { transform: translateX(0) }
+}
