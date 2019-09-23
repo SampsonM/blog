@@ -29,7 +29,7 @@ const mutations: MutationType = {
 const actions: ActionType = {
   toggleMenu({ commit }, payload) {
     commit('TOGGLE_MENU')
-    if (payload !== '') {
+    if (payload) {
       commit(`TOGGLE_${payload.toUpperCase()}`)
     }
   }

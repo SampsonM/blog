@@ -6,19 +6,12 @@
 
     <div class="about">
 
-      <h1 class="about__title">Mark <br> Sampson</h1>
-
-      <img
-        class="about__profile-picture"
-        src="../assets/images/me.png"
-        alt="mark sampson">
+      <h1 class="about__title">Mark Sampson, <br> Front End Developer </h1>
       
       <router-link to="/">
         <button>toggle</button>
       </router-link>
     </div>
-
-
   </transition>
 </template>
 
@@ -47,16 +40,27 @@ export default class About extends Vue {
 }
 
 .about {
-  height: 100%;
-  z-index: 2;
   position: absolute;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  z-index: 2;
 
   &__title {
+    font-size: 8vw;
     color: $secondary-text;
+    transition-duration: 0.2s;
+
+    @include mobile {
+      font-size: 2rem;
+    }
   }
 
   &__profile-picture {
-    height: 200px;
+    width: 100%;
     border-radius: 2px;
   }
 }

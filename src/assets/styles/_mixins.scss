@@ -5,7 +5,7 @@ $screen-lg: 720px;
 $screen-desktop: 992px;
 
 // 420px
-@mixin phone {
+@mixin mobile {
 	@media (min-width: #{$screen-md}) {
 		@content;
 	}

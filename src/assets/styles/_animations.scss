@@ -20,13 +20,15 @@
 
 // CARD 0
 @keyframes card0InMobile {
-	0% { transform: translateY(-480px) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(-480px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes card0InTablet {
-	0% { transform: translateY(-280px) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(-280px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes card0InDesktop {
@@ -36,27 +38,42 @@
 
 // CARD 1
 @keyframes card1InMobile {
-	0% { transform: translateY(-360px) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(-360px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes card1InTablet {
-	0% { transform: translateY(-160px) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(-160px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
 }
 
 // CARD 2
 @keyframes card2InMobile {
-	0% { transform: translateY(-270px) }
-	100% { transform: translateY(0) }
+	0% { transform: translateY(-270px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes card2InTablet {
-	0% { transform: translateY(-70px) }
-	100% { transform: translatY(0) }
+	0% { transform: translateY(-70px); opacity: 0; }
+	20% { opacity: 0; }
+	100% { transform: translatY(0); opacity: 1; }
 }
 
 @keyframes card2InDesktop {
 	0% { transform: translateX(100px) }
 	100% { transform: translateX(0) }
+}
+
+@keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+
+@keyframes gradientMenuClosed {
+    0%{background-position:50% 51%}
+    100%{background-position:0% 100%}
 }

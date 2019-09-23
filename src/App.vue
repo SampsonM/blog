@@ -14,6 +14,10 @@ export default class App extends Vue {
   @Action private toggleMenu: any
 
   private created(): void {
+    if (window.location.href.split('/')[3] !== '' && this.isMenuOpen) {
+      this.toggleMenu()
+    }
+
     this.$router.beforeEach((to, from, next) => {
       const pageLeft = from.path.split('/')[1]
       this.toggleMenu(pageLeft)
@@ -24,23 +28,22 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-.app {  
-  background: linear-gradient(45deg, $primary-dark-15 25%, $primary-dark-15 25%, $primary-colour 100%);
+.app {
   height: 100%;
   overflow: auto;
   transition-duration: 0.3s;
-  border: 5px solid;
-  border-image-source: linear-gradient(45deg, #606124 25%, #024833 100%);
+  border: 8px solid;
+  border-image-source: linear-gradient(45deg, #3f4d1e 25%, #024934 100%);
   border-image-slice: 1;
-
-  @include tablet {
-    background: linear-gradient(45deg, $primary-dark 25%, $primary-dark 25%, $primary-colour 100%);
-    border-image-source: linear-gradient(45deg, #474820 25%, #024833 100%);
-    height: 100vh;
-  }
+  background: linear-gradient(45deg, $primary-dark, #03533b);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
 }
 
 .menu-closed {
+  animation: none;
+  animation: gradientMenuClosed 2s ease-in 0s;
+  background-position:0% 100%;
   border-width: 0;
 }
 </style>
