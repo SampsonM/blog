@@ -1,23 +1,21 @@
 <template>
-  <menu class="menu">
-    <ul class="menu__list">
+  <transition
+    appear
+    name="home"
+    mode="in-out">
+    <menu class="menu">
       <router-link
         :to="'/'+item"
         v-for="(item, i) in menuItems"
-        class="menu__card-wrapper"
+        :class="['menu__section', i === 0 ? 'menu__about' : 'menu__blog']"
         :key="i">
+        <div class="menu__title">
+          {{ item }}
+        </div>
 
-        <transition
-          appear
-          :name="'card-'+i"
-          mode="in-out">
-
-          <card :title="item"></card>
-
-        </transition>
       </router-link>
-    </ul>
-  </menu>
+    </menu>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -42,90 +40,64 @@ export default class Menu extends Vue {
 </script>
 
 <style lang="scss">
-.card-0-enter-active {
-  animation: card0InMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  @include tablet {
-    animation: card0InTablet 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  @include desktop {
-    animation: card0InDesktop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
+.home-enter-active {
+  animation: homeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.card-1-enter-active {
-  animation: card1InMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  @include tablet {
-    animation: card1InTablet 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  @include desktop {
-    animation: none;
-  }
-}
-
-.card-2-enter-active {
-  animation: card2InMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  @include tablet {
-    animation: card2InTablet 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  @include desktop {
-    animation: card2InDesktop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
+.home-leave-active {
+  animation: homeIn 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse;
 }
 
 .menu {
-  width: 80%;
+  min-width: 235%;
+	height: 110%;
+  transform: rotate(45deg) translateX(-10px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+	
 
-  &__list {
-    opacity: 1;
-    max-width: 400px;
+  &__section {
     width: 100%;
-    padding-top: 30px;
-  }
-
-  &__card-wrapper {
-    list-style-type: none;
+    height: 50%;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
   }
 
-  @include tablet {
-    &__list {
-      padding-top: 0;
-    }
+  &__about {
+    background-color: #bcf8c134;
 
-    &__card-wrapper {
-      &:last-of-type {
-        .card {
-          margin-bottom: 0;
-        }
-      }
+    .menu__title {
+      align-self: flex-end;
+      -webkit-text-stroke: 3px #cfcd5f;
+      color: transparent;
+      animation: pulse 1s linear 4.8s infinite both;
     }
+  }
+  
+  &__blog {
+    background-color: #70707042;
+  }
+
+  &__title {
+    -webkit-text-stroke: 3px #9fc73a;
+    color: transparent;
+    font-size: 110px;
+    height: 120px;
+    line-height: 119px;
+    animation: pulse 1s linear 5s infinite both;
+  }
+
+  @include tablet {
   }
 
   @include desktop {
-    &__list {
-      max-width: none;
-    }
-  
-    &__card-wrapper {
+    &__section {
       float: left;
       width: 32%;
       margin-right: 2%;
       height: 100%;
-
-      &:last-of-type {
-        margin-right: 0;
-
-        .card {
-          margin-bottom: 0;
-        }
-      }
     }
   }
 }
