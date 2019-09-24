@@ -36,8 +36,7 @@ export default class Menu extends Vue {
 
   private menuItems: string[] = [
     'About',
-    'Blog',
-    'Portfolio'
+    'Blog'
   ]
 }
 </script>

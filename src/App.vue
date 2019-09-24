@@ -37,12 +37,12 @@ export default class App extends Vue {
   border-image-slice: 1;
   background: linear-gradient(45deg, $primary-dark, #03533b);
   background-size: 400% 400%;
-  animation: gradient 12s ease infinite;
+  animation: gradient 18s ease infinite;
 }
 
 .menu-closed {
   animation: none;
-  animation: gradientMenuClosed 2s ease-in 0s;
+  animation: gradientMenuClosed 3s ease-in 0s;
   background-position:0% 100%;
   border-width: 0;
 }

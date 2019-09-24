@@ -5,7 +5,6 @@
     <div class="card__icon">
       <smart-card-outline v-if="title === 'About'"></smart-card-outline>
       <post-outline v-if="title === 'Blog'"></post-outline>
-      <image-multiple v-if="title === 'Portfolio'"></image-multiple>
     </div>
   </div>
 </template>
@@ -38,10 +37,10 @@ export default class Card extends Vue {
   border: 1px solid $secondary-colour;
   border-radius: 3px;
   margin-bottom: 20px;
-  padding: 10px 10px 4px 10px;
+  padding: 10px;
 
   &:hover {
-    transition-duration: 400ms;
+    transition-duration: 0.5s;
     background-color: $secondary-colour;
 
     .card__title {
