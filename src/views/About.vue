@@ -7,6 +7,12 @@
     <div class="about">
 
       <h1 class="about__title">Mark Sampson, <br> Front End Developer </h1>
+
+      <p class="about__text">
+        Currently working at
+        <a href="www.moneysupermarket.com" class="about__link">Moneysupermarket</a>
+        using VueJS & Typescript. Spending my time creating websites and experimenting with tech!
+      </p>
       
       <router-link to="/">
         <button>toggle</button>
@@ -48,15 +54,27 @@ export default class About extends Vue {
   justify-items: center;
   flex-direction: column;
   z-index: 2;
+  color: $secondary-text;
 
   &__title {
+    color: $secondary-text-header;
     font-size: 8vw;
-    color: $secondary-text;
+    line-height: 40px;
+    margin: 25px 0;
     transition-duration: 0.2s;
 
     @include mobile {
       font-size: 2rem;
     }
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__link {
+    color: $primary-light-link;
   }
 
   &__profile-picture {

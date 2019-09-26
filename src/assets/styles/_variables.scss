@@ -4,9 +4,15 @@ $primary-light: #39796b;
 $primary-dark: #00251a;
 $primary-dark-15: lighten(#00251a, 4%);
 $primary-text: #003325;
+$primary-light-link: lighten(#488b7d, 20%);
 
 $secondary-colour: #f5e65e;
 $secondary-colour-15: lighten($secondary-colour, 15%);
 $secondary-light: #ffff72;
 $secondary-dark: #c8b900;
 $secondary-text: #f5e65e;
+$secondary-text-header: darken($secondary-text, 18%);
+
+$primary-font: 'Work San', Open Sans;
+
+$secondary-font: 'Be Vietnam', Open Sans;

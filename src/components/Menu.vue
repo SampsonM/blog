@@ -61,19 +61,7 @@ export default class Menu extends Vue {
   }
 
   @include desktop {
-    animation: none;
-  }
-}
-
-.card-2-enter-active {
-  animation: card2InMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-
-  @include tablet {
-    animation: card2InTablet 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-
-  @include desktop {
-    animation: card2InDesktop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: card1InDesktop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 
@@ -115,7 +103,7 @@ export default class Menu extends Vue {
   
     &__card-wrapper {
       float: left;
-      width: 32%;
+      width: 49%;
       margin-right: 2%;
       height: 100%;
 

@@ -70,7 +70,7 @@ export default class Card extends Vue {
   }
 
   @include tablet {
-    height: 31%;
+    height: 47%;
     margin-bottom: 2%;
   }
 

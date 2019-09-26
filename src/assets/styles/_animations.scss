@@ -36,7 +36,7 @@
 	100% { transform: translateX(0) }
 }
 
-// CARD 1
+// CARD 2
 @keyframes card1InMobile {
 	0% { transform: translateY(-360px); opacity: 0; }
 	20% { opacity: 0; }
@@ -44,25 +44,12 @@
 }
 
 @keyframes card1InTablet {
-	0% { transform: translateY(-160px); opacity: 0; }
-	20% { opacity: 0; }
-	100% { transform: translateY(0); opacity: 1; }
-}
-
-// CARD 2
-@keyframes card2InMobile {
-	0% { transform: translateY(-270px); opacity: 0; }
-	20% { opacity: 0; }
-	100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes card2InTablet {
 	0% { transform: translateY(-70px); opacity: 0; }
 	20% { opacity: 0; }
 	100% { transform: translatY(0); opacity: 1; }
 }
 
-@keyframes card2InDesktop {
+@keyframes card1InDesktop {
 	0% { transform: translateX(100px) }
 	100% { transform: translateX(0) }
 }
