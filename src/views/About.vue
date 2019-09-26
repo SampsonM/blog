@@ -51,7 +51,7 @@ export default class About extends Vue {
 
   &__title {
     font-size: 8vw;
-    color: $about-text;
+    color: $secondary-text;
     transition-duration: 0.2s;
 
     @include mobile {
