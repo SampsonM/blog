@@ -12,7 +12,7 @@
 
       <p class="about__text">
         Currently working at
-        <a href="www.moneysupermarket.com" class="about__link">Moneysupermarket</a>
+        <a href="https://www.moneysupermarket.com" class="about__link">Moneysupermarket</a>
         using VueJS & Typescript to build new features and optimize existing ones.
         In my spare time I enjoy building websites and experimenting with tech.
       </p>
