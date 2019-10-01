@@ -58,7 +58,7 @@ export default class Swipe {
 		this.xDiff = this.xDown - xUp
 		this.yDiff = this.yDown - yUp
 
-		if (Math.abs(this.xDiff) > Math.abs(this.yDiff) && (this.xDiff > 50 || this.yDiff > 50)) { // Most significant
+		if (Math.abs(this.xDiff) > Math.abs(this.yDiff)) {
 			this.xDiff > 0
 				? this.onLeft()
 				: this.onRight()
@@ -68,7 +68,6 @@ export default class Swipe {
 				: this.onDown()
 		}
 
-		// Reset values
 		this.xDown = null
 		this.yDown = null
 	}
