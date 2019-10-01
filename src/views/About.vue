@@ -31,7 +31,7 @@ export default class About extends Vue {
 	@Action private toggleMenu: any
 
 	private mounted(): void {
-		new Swiper('.about').onUp(() => alert('swiped up')).run()
+		new Swiper('.about').onDown(() => alert('swiped up')).run()
 	}
 }
 </script>

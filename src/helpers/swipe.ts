@@ -48,6 +48,9 @@ export default class Swipe {
 		if (!this.xDown || !this.yDown) {
 			return
 		}
+		if (this.xDown) {
+			evt.preventDefault()
+		}
 
 		const xUp = evt.touches[0].clientX
 		const yUp = evt.touches[0].clientY
