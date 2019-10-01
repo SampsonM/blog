@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { RootState, MutationType, ActionType } from './types'
+import { RootState, MutationType, ActionType } from '../types'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
