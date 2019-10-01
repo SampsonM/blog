@@ -10,20 +10,20 @@ import { State, Action } from 'vuex-class'
 
 @Component
 export default class App extends Vue {
-  @State private isMenuOpen!: boolean
-  @Action private toggleMenu: any
+	@State private isMenuOpen!: boolean
+	@Action private toggleMenu: any
 
-  private created(): void {
-    if (window.location.href.split('/')[3] !== '' && this.isMenuOpen) {
-      this.toggleMenu()
-    }
+	private created(): void {
+		if (window.location.href.split('/')[3] !== '' && this.isMenuOpen) {
+			this.toggleMenu()
+		}
 
-    this.$router.beforeEach((to, from, next) => {
-      const pageLeft = from.path.split('/')[1]
-      this.toggleMenu(pageLeft)
-      next()
-    })
-  }
+		this.$router.beforeEach((to, from, next) => {
+			const pageLeft = from.path.split('/')[1]
+			this.toggleMenu(pageLeft)
+			next()
+		})
+	}
 }
 </script>
 

@@ -16,14 +16,14 @@ import PostOutline from 'vue-material-design-icons/PostOutline.vue'
 import ImageMultiple from 'vue-material-design-icons/ImageMultiple.vue'
 
 @Component({
-  components: {
-    SmartCardOutline,
-    PostOutline,
-    ImageMultiple
-  }
+	components: {
+		SmartCardOutline,
+		PostOutline,
+		ImageMultiple
+	}
 })
 export default class Card extends Vue {
-  @Prop() private title!: string
+	@Prop() private title!: string
 }
 </script>
 

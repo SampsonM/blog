@@ -1,22 +1,21 @@
 <template>
-  <transition
-    appear
-    name="about"
-    mode="in-out">
-
+  <transition appear name="about" mode="in-out">
     <div class="about">
+      <router-link to="/">
+        <button>Home</button>
+      </router-link>
 
-      <h1 class="about__title">Mark Sampson, <br> Front End Developer </h1>
+      <h1 class="about__title">
+        Mark Sampson,
+        <br />Front End Developer
+      </h1>
 
       <p class="about__text">
         Currently working at
         <a href="www.moneysupermarket.com" class="about__link">Moneysupermarket</a>
-        using VueJS & Typescript. Spending my time creating websites and experimenting with tech!
+        using VueJS & Typescript to build new features and optimize existing ones.
+        In my spare time I enjoy building websites and experimenting with tech.
       </p>
-      
-      <router-link to="/">
-        <button>toggle</button>
-      </router-link>
     </div>
   </transition>
 </template>
@@ -24,11 +23,16 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Action } from 'vuex-class'
+import Swiper from '@/helpers/swipe'
 
 @Component
 export default class About extends Vue {
-  @State private isAboutOpen!: boolean
-  @Action private toggleMenu: any
+	@State private isAboutOpen!: boolean
+	@Action private toggleMenu: any
+
+	private mounted(): void {
+		new Swiper('.about').onUp(() => console.log('swiped up')).run()
+	}
 }
 </script>
 

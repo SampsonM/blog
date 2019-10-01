@@ -26,18 +26,18 @@ import Card from '@/components/Card.vue'
 import { State, Action } from 'vuex-class'
 
 @Component({
-  components: {
-    Card
-  }
+	components: {
+		Card
+	}
 })
 export default class Menu extends Vue {
-  @State private isMenuOpen!: boolean
-  @Action private toggleMenu: any
+	@State private isMenuOpen!: boolean
+	@Action private toggleMenu: any
 
-  private menuItems: string[] = [
-    'About',
-    'Blog'
-  ]
+	private menuItems: string[] = [
+		'About',
+		'Blog'
+	]
 }
 </script>
 
