@@ -23,3 +23,9 @@ interface Context {
 }
 
 type MutationNames = 'TOGGLE_ABOUT' | 'TOGGLE_BLOG' | 'TOGGLE_MENU' | 'TOGGLE_PORTFOLIO' | string
+
+export interface RgbStartStopValues {
+	[key: string]: number[]
+	start: number[]
+	stop: number[]
+}

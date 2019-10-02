@@ -3,17 +3,17 @@
 	100% { transform: translateY(0) }
 }
 
-@keyframes aboutIn {
+@keyframes screenIn {
 	0% { transform: translateY(100vh) }
 	100% { transform: translateY(0) }
 }
 
-@keyframes aboutOutMobile {
+@keyframes screenOutMobile {
 	0% { transform: translateY(-100vh) }
 	100% { transform: translateY(0) }
 }
 
-@keyframes aboutOutTablet {
+@keyframes screenOutTablet {
 	0% { transform: translateY(-100vh) }
 	100% { transform: translateY(0) }
 }
