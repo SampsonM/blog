@@ -69,6 +69,7 @@ export default class About extends Vue {
 }
 
 .about {
+  overscroll-behavior: none;
   position: absolute;
   padding: 15px;
   height: 100%;
