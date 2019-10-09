@@ -8,14 +8,29 @@
 	100% { transform: translateY(0) }
 }
 
+@keyframes aboutScreenIn {
+	0% { transform: translate(-50%, 100vh); margin: 0 50%; }
+	100% { transform: translate(-50%, 0); margin: 0 50%; }
+}
+
 @keyframes screenOutMobile {
 	0% { transform: translateY(-100vh) }
 	100% { transform: translateY(0) }
 }
 
+@keyframes aboutScreenOutMobile {
+	0% { transform: translate(-50%, -100vh); margin: 0 50%; }
+	100% { transform: translate(-50%, 0); margin: 0 50%; }
+}
+
 @keyframes screenOutTablet {
 	0% { transform: translateY(-100vh) }
 	100% { transform: translateY(0) }
+}
+
+@keyframes aboutScreenOutTablet {
+	0% { transform: translate(-50%, -100vh); margin: 0 50%; }
+	100% { transform: translate(-50%, 0); margin: 0 50%; }
 }
 
 // CARD 0
