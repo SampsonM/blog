@@ -4,6 +4,10 @@
 			<router-link to="/" class="blog__back">
 				<arrow-up-bold-box></arrow-up-bold-box>
 			</router-link>
+		
+		<div>
+			Coming soon.
+		</div>
 		</div>
 	</transition>
 </template>
@@ -43,6 +47,7 @@ export default class Blog extends Vue {
   padding: 15px;
   height: 100%;
 	width: 100%;
+	color: $secondary-text;
 
 	&__back {
 		position: absolute;
