@@ -62,7 +62,7 @@ export default class About extends Vue {
 	@Action private toggleMenu: any
 
 	private mounted(): void {
-		new Swiper('.about').onLeft(() => this.$router.push({ path: '/' })).run()
+		new Swiper('.about').onDown(() => this.$router.push({ path: '/' })).run()
 	}
 }
 </script>

@@ -67,7 +67,7 @@ export default class Swipe {
 		} else {
 			if (this.yDiff > 30) {
 				this.onUp()
-			} else if (this.yDiff < -30) {
+			} else if (this.yDiff < -20) {
 				this.onDown()
 			}
 		}
