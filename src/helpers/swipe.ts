@@ -48,7 +48,7 @@ export default class Swipe {
 		if (!this.xDown || !this.yDown) {
 			return
 		}
-		if (this.xDown) {
+		if (this.xDown || this.yDown) {
 			evt.preventDefault()
 		}
 
