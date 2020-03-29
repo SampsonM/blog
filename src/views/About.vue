@@ -80,6 +80,7 @@ export default class About extends Vue {
   position: relative;
   padding: 15px;
   min-height: 100vh;
+  height: 100%;
   width: 100%;
   max-width: 1200px;
   margin: 0 50%;
