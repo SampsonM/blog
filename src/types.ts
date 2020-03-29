@@ -29,3 +29,9 @@ export interface RgbStartStopValues {
 	start: number[]
 	stop: number[]
 }
+
+export interface BlogInfo {
+	name: string
+	component: string
+	title: string
+}

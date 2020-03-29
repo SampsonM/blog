@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Blogs from './static/blogs'
+import { BlogInfo } from './types'
 
 Vue.use(Router)
 

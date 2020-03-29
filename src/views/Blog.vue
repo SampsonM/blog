@@ -5,9 +5,21 @@
 				<arrow-up-bold-box></arrow-up-bold-box>
 			</router-link>
 		
-		<div>
-			Coming soon.
-		</div>
+			<div>
+				Coming soon.
+			</div>
+
+			<!-- programatically render list of blog posts -->
+			<div v-for="(blog, i) in blogs" :key="i">
+				<button @click="openBlog(blog.name)">
+					{{ blog.title }}
+				</button>
+
+				<component
+					v-if="cons[`${blog.name}Open`]"
+					:is="`${blog.component}`">
+				</component>
+			</div>
 		</div>
 	</transition>
 </template>
@@ -16,13 +28,40 @@
 import { Component, Vue } from 'vue-property-decorator'
 import Swiper from '@/helpers/swipe'
 import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
+import Blogs from '../static/blogs'
+import { BlogInfo } from '../types'
+
+function markdownComponnents() {
+	return Blogs.reduce((acc: any, blog: BlogInfo) => {
+		acc[blog.name] = () => import(`../markdowns/${blog.name}.md`)
+		return acc
+	}, {})
+}
+
+interface MdConditions {
+	[key: string]: boolean
+}
 
 @Component({
 	components: {
-		ArrowUpBoldBox
+		ArrowUpBoldBox,
+		...markdownComponnents()
 	}
 })
 export default class Blog extends Vue {
+	private blogs: BlogInfo[] = Blogs
+	private cons: MdConditions = {}
+
+	private openBlog(name: string) {
+		this.cons[`${name}Open`] = !this.cons[`${name}Open`]
+	}
+
+	private created() {
+		this.blogs.forEach((blog) => {
+			Vue.set(this.cons, `${blog.name}Open`, false)
+		})
+	}
+
 	private mounted(): void {
 		new Swiper('.blog').onDown(() => this.$router.push({ path: '/' })).run()
 	}
