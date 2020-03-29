@@ -48,7 +48,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Swiper from '@/helpers/swipe'
 import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 import ArrowExpandVertical from 'vue-material-design-icons/ArrowExpandVertical.vue'
 import Blogs from '../static/blogs'
@@ -90,10 +89,6 @@ export default class Blog extends Vue {
 		this.blogs.forEach((blog) => {
 			Vue.set(this.blogStatus, `${blog.name}Open`, false)
 		})
-	}
-
-	private mounted(): void {
-		new Swiper('.blog').onDown(() => this.$router.push({ path: '/' })).run()
 	}
 }
 </script>

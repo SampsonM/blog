@@ -49,7 +49,6 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import { State, Action } from 'vuex-class'
-import Swiper from '@/helpers/swipe'
 import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 
 @Component({
@@ -60,10 +59,6 @@ import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 export default class About extends Vue {
 	@State private isAboutOpen!: boolean
 	@Action private toggleMenu: any
-
-	private mounted(): void {
-		new Swiper('.about').onDown(() => this.$router.push({ path: '/' })).run()
-	}
 }
 </script>
 
