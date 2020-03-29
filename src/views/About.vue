@@ -31,13 +31,13 @@
         </p>
 
         <p class="about__text-right">
-          On the frontend I'm comfortable using VueJS, React and Typescript, and building any servers I tend to use NodeJs.
-          I have experience building databases with MongoDB, MLab and AWS. Other technologies used include ReactJS, 
-          AngulaJS and a little Java.
+          I'm comfortable building F/E apps using vanillaJS/TS, Vue and React, and use TDD in professional settings.
+          I have experience building databases with MongoDB, MLab and AWS, and have built CICD pipelines using 
+          Jenkins to automate test, build and deployment processes.
         </p>
 
         <p class="about__text-left">
-          My personal successes including adding Lighthouse testing to our 
+          My personal successes including adding Lighthouse tests to our 
           Jenkins build pipelines to improve accessibility and performance, 
           and building a validation framework for a new Energy Autoswitching product.
         </p>
