@@ -31,17 +31,14 @@ export default class App extends Vue {
 <style lang="scss">
 .app {
   display: block;
-  position:absolute;
-  height:auto;
-  bottom:0;
-  top:0;
-  left:0;
-  right:0;
+  position: relative;
+  height: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   height: 100%;
-  overflow: auto;
+  max-width: 100%;
+  overflow-x: hidden;
   transition-duration: 0.3s;
   border: 8px solid;
 	border-image-source: linear-gradient(45deg, #656929 25%, #024934 100%);

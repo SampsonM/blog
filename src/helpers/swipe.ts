@@ -63,7 +63,7 @@ export default class Swipe {
 				? this.onLeft()
 				: this.onRight()
 		} else {
-			this.yDiff > 0
+			this.yDiff > 100
 				? this.onUp()
 				: this.onDown()
 		}

@@ -16,7 +16,16 @@
 
       <div class="about__content">
         <p class="about__text-left">
-          Currently<a href="https://www.linkedin.com/in/mark-sampson-33995bb9/" target="blank" class="about__link">working</a>at<a href="https://www.moneysupermarket.com" target="blank" class="about__link">Moneysupermarket</a>
+          Currently 
+          <a
+            href="https://www.linkedin.com/in/mark-sampson-33995bb9/"
+            target="blank"
+            class="about__link">working</a>
+           at 
+          <a
+            href="https://www.moneysupermarket.com"
+            target="blank"
+            class="about__link">Moneysupermarket</a> 
           using VueJS & Typescript to build out new products and optimize existing ones.
           In my spare time I enjoy building websites and experimenting with tech.
         </p>
@@ -73,9 +82,9 @@ export default class About extends Vue {
 
 .about {
   overscroll-behavior: none;
-  position: absolute;
+  position: relative;
   padding: 15px;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   max-width: 1200px;
   margin: 0 50%;
