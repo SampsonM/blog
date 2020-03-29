@@ -59,13 +59,15 @@ export default class Swipe {
 		this.yDiff = this.yDown - yUp
 
 		if (Math.abs(this.xDiff) > Math.abs(this.yDiff)) {
-			this.xDiff > 0
-				? this.onLeft()
-				: this.onRight()
+			if (this.xDiff < -30) {
+				this.onLeft()
+			} else if (this.xDiff > 30) {
+				this.onRight()
+			}
 		} else {
-			if (this.yDiff > 50) {
+			if (this.yDiff > 30) {
 				this.onUp()
-			} else if (this.yDiff < -50) {
+			} else if (this.yDiff < -30) {
 				this.onDown()
 			}
 		}
