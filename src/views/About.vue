@@ -1,7 +1,6 @@
 <template>
   <transition appear name="about" mode="in-out">
-    <div class="about">
-
+    <section class="about">
       <div class="about__title-container">
         <h1 class="about__title">
           Mark Sampson,
@@ -16,21 +15,25 @@
       </div>
 
       <div class="about__content">
-
-        <p class="about__text-intro">
-          Currently working at
-          <a href="https://www.moneysupermarket.com" target="blank" class="about__link">Moneysupermarket</a>
-          using VueJS & Typescript to build new features and optimize existing ones.
+        <p class="about__text-left">
+          Currently<a href="https://www.linkedin.com/in/mark-sampson-33995bb9/" target="blank" class="about__link">working</a>at<a href="https://www.moneysupermarket.com" target="blank" class="about__link">Moneysupermarket</a>
+          using VueJS & Typescript to build out new products and optimize existing ones.
           In my spare time I enjoy building websites and experimenting with tech.
         </p>
 
-        <p class="about__text-more">
-          On the frontend I use VueJS and Typescript, and if I need to build any RESTful API's I use NODE.
-          I have experience building databases with MongoDB, MLab and AWS S3 buckets. Other technologies used include ReactJS, AngulaJS and a little Java.
+        <p class="about__text-right">
+          On the frontend I'm comfortable using VueJS, React and Typescript, and building any servers I tend to use NodeJs.
+          I have experience building databases with MongoDB, MLab and AWS. Other technologies used include ReactJS, 
+          AngulaJS and a little Java.
+        </p>
+
+        <p class="about__text-left">
+          My personal successes including adding Lighthouse testing to our 
+          Jenkins build pipelines to improve accessibility and performance, 
+          and building a validation framework for a new Energy Autoswitching product.
         </p>
       </div>
-
-    </div>
+    </section>
   </transition>
 </template>
 
@@ -57,14 +60,14 @@ export default class About extends Vue {
 
 <style lang="scss">
 .about-enter-active {
-  animation: aboutScreenIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: pageScreenIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .about-leave-active {
-  animation: aboutScreenOutMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: pageScreenOutMobile 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   @include tablet {
-    animation: aboutScreenOutTablet 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: pageScreenOutTablet 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 }
 
@@ -85,6 +88,8 @@ export default class About extends Vue {
 
   &__content {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
 
     @include mobile {
       padding: 0 20px;
@@ -148,10 +153,18 @@ export default class About extends Vue {
     &-link {
       height: 32px;
       color: #00261a;
+      transition-duration: 0.2s;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        color: $primary-light-link;
+        animation: flash 5s;
+      }
     }
   }
 
-  &__text-intro {
+  &__text-left {
     max-width: 460px;
     font-size: 20px;
     line-height: 30px;
@@ -164,12 +177,13 @@ export default class About extends Vue {
     }
   }
 
-  &__text-more {
+  &__text-right {
     max-width: 460px;
     font-size: 20px;
     line-height: 30px;
     text-align: right;
-    float: right;
+    align-self: flex-end;
+    margin-bottom: 40px;
 
      @include tablet {
       font-size: 28px;
@@ -180,11 +194,21 @@ export default class About extends Vue {
 
   &__link {
     color: $primary-light-link;
-  }
+    padding: 0 4px 4px 4px;
+    border-radius: 5px;
+    border: 2px solid transparent;
 
-  &__profile-picture {
-    width: 100%;
-    border-radius: 2px;
+    &:focus,
+    &:hover {
+      transition-duration: 0.2s;
+      outline: none;
+      border: 2px solid $secondary-colour;
+    }
+
+    &:hover {
+      background-color: $secondary-colour;
+      color: $primary-text;
+    }
   }
 }
 </style>

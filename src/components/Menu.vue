@@ -80,6 +80,25 @@ export default class Menu extends Vue {
   &__card-wrapper {
     list-style-type: none;
     text-decoration: none;
+
+    &:focus {
+      outline: none;
+
+      .card {
+        transition-duration: 0.5s;
+        background-color: $secondary-colour;
+
+        .card__title {
+          color: $primary-text;
+          transition-duration: 400ms;
+        }
+
+        path {
+          transition-duration: 400ms;
+          fill: $primary-text;
+        }
+      }
+    }
   }
 
   @include tablet {

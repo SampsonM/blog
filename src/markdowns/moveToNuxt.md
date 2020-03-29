@@ -1,3 +1,4 @@
-# This is a move to nuxt blog
+# Heading 1
 ## Heading 2
-_lorem ipsum_ dolor __amet__
+### Heading 3
+[I'm a link](https://www.google.com)

@@ -32,6 +32,6 @@ export interface RgbStartStopValues {
 
 export interface BlogInfo {
 	name: string
-	component: string
+	componentName: string
 	title: string
 }

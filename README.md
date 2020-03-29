@@ -15,18 +15,21 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
+  
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deploy to netlify
+```
+npm run deploy
+```
 
-## Adding a blog post
+#
+## **Adding a blog post**
 
+1. Add blog info to ./static/blogs.ts
+2. Add markdown blog to ./markdowns (name must conform to markdown file name)
+
+Help writing markdown can be found using this [markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
