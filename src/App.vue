@@ -37,6 +37,7 @@ export default class App extends Vue {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   height: 100%;
+  min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
   transition-duration: 0.3s;
