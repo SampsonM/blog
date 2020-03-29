@@ -65,9 +65,14 @@ export default class Swipe {
 				this.onRight()
 			}
 		} else {
+			const scrollTop = (window.pageYOffset !== undefined)
+				? window.pageYOffset
+				: (document.documentElement || document.body.parentNode || document.body).scrollTop
+
 			if (this.yDiff > 30) {
 				this.onUp()
-			} else if (this.yDiff < -15) {
+			} else if (this.yDiff < -15 && scrollTop === 0) {
+				console.log
 				this.onDown()
 			}
 		}
