@@ -27,7 +27,7 @@
             target="blank"
             class="about__link">Moneysupermarket</a> 
           using VueJS & Typescript to build out new products and optimize existing ones.
-          In my spare time I enjoy building websites and experimenting with tech.
+          In my spare time I enjoy trying out different tech within personal projects and playing the guitar.
         </p>
 
         <p class="about__text-right">
