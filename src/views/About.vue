@@ -79,7 +79,7 @@ export default class About extends Vue {
   overscroll-behavior: none;
   position: relative;
   padding: 15px;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   max-width: 1200px;
   margin: 0 50%;
