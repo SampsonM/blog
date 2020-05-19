@@ -1,4 +1,4 @@
-<template>
+n<template>
 	<transition appear name="blog" mode="in-out">
 		<section class="blog">
 			<h1 class="blog__title">Blog</h1>
