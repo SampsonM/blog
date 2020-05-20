@@ -2,28 +2,28 @@
 version: 2.1
 
 executors:
-	node-12-executor:
-		docker:
-			- image: circleci/node:12
-		working_directory: ~/example
+  node-12-executor:
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/example
 
 jobs:
-	deploy-ui:
-		executor: node-12-executor
-		steps:
-			- checkout
-			- run:
-					name: INSTALL - dependencies
-					command: npm install
-
-			- run:
-					name: BUILD - App
-					command: |
-						npm run build
+  deploy-ui:
+    executor: node-12-executor
+    steps:
+      - checkout
+      - run:
+          name: INSTALL - dependencies
+          command: npm install
 
       - run:
-					name: DEPLOY - App
-					command: npm run deploy
+          name: BUILD - App
+          command: |
+             npm run build
+
+      - run:
+          name: DEPLOY - App
+          command: npm run deploy
 
 workflows:
   deploy-blog:
