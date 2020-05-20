@@ -53,7 +53,7 @@ import ArrowExpandVertical from 'vue-material-design-icons/ArrowExpandVertical.v
 import Blogs from '../static/blogs'
 import { BlogInfo } from '../types'
 
-function markdownComponnents() {
+function markdownComponents() {
 	return Blogs.reduce((acc: any, blog: BlogInfo) => {
 		acc[blog.name] = () => import(`../markdowns/${blog.name}.md`)
 		return acc
@@ -68,7 +68,7 @@ interface BlogStatus {
 	components: {
 		ArrowUpBoldBox,
 		ArrowExpandVertical,
-		...markdownComponnents()
+		...markdownComponents()
 	}
 })
 export default class Blog extends Vue {
@@ -146,6 +146,10 @@ export default class Blog extends Vue {
 
 	&__post {
 		margin: 20px 0;
+		padding: 15px;
+		background-color: #022100;
+		border-radius: 5px;
+		word-spacing: 1.3px;
 
 		// styling for markdown
 		h1 {
@@ -155,6 +159,7 @@ export default class Blog extends Vue {
 			width: 100%;
 			font-size: 7vw;
 			margin-bottom: 10px;
+			padding-left: 5px;
 
 			@include tablet {
 				font-size: 3.5vw;
@@ -163,7 +168,8 @@ export default class Blog extends Vue {
 
 		h2 {
 			font-size: 6vw;
-			margin-bottom: 10px;
+			margin: 35px 0 20px 0;
+			text-decoration: underline;
 			
 			@include tablet {
 				font-size: 3vw;
@@ -181,7 +187,7 @@ export default class Blog extends Vue {
 
 		a {
 			color: $primary-light-link;
-			padding: 0 4px 4px 4px;
+			padding: 0 2px 4px 2px;
 			border-radius: 5px;
 			border: 2px solid transparent;
 
@@ -201,6 +207,49 @@ export default class Blog extends Vue {
 				background-color: $secondary-colour;
 				color: $primary-text;
 			}
+		}
+
+		p {
+			margin-bottom: 20px;
+			max-width: 1000px;
+		}
+
+		strong {
+			font-size: 17px;
+		}
+
+		em {
+			color: $primary-light-link;
+		}
+
+		ul {
+			margin-bottom: 20px;
+			padding: 0px 0 0 40px;
+		}
+		
+		pre {
+			background-color: #355535;
+    	padding: 10px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+
+		code {
+			position: relative;
+			display: block;
+			overflow: auto;
+		}
+
+		.hljs-comment {
+			color: darken($secondary-dark, 10%);
+		}
+
+		.hljs-attr {
+			color: $primary-light-link;
+		}
+
+		.hljs-string {
+			color: $secondary-light;
 		}
 	}
 	
