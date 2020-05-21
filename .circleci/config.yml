@@ -16,9 +16,6 @@ jobs:
           fingerprints:
             - 6f:f9:5c:37:e6:e3:10:a5:10:8a:4c:8d:ec:93:5e:43
       - run:
-          name: ECHO BRANCH
-          command: echo $(git branch)
-      - run:
           name: INSTALL - dependencies
           command: npm install
       - run:
