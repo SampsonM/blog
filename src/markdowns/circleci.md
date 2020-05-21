@@ -1,4 +1,6 @@
-# CircleCI Setup for a front end app!
+# CircleCI setup for a front end app!
+
+__Published: *21 May 2020*__
 
 I'd like to write something profound here about how I decided to use <a href="https://circleci.com/docs/2.0/migrating-from-jenkins/" target="blank">CircleCI</a> because of the improved parallelism, or the existance of built in support for Docker compared to Jenkins...
 
@@ -23,7 +25,7 @@ Unfortunately I'm not working on commission and can't think of any downsides as 
 
 ## What is config.yaml?
 
-In your repo, on a *circleci-project-setup branch* in a new *.circleci* directory, you should now have a *config.yaml* that looks like this.
+In your repo, on a *circleci-project-setup* branch in a new *.circleci* directory, you should now have a *config.yaml* that looks like this.
 
 ```yaml
 # Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
