@@ -12,6 +12,9 @@ jobs:
     executor: node-12-executor
     steps:
       - checkout
+       - add_ssh_keys:
+          fingerprints:
+            - "30:34:0c:22:0b:7d:5e:8b:15:dd:32:d4:dc:26:fd:a7"
       - run:
           name: ECHO BRANCH
           command: echo $(git branch)
@@ -34,4 +37,5 @@ workflows:
       - deploy-ui:
           filters:
             branches:
-              only: prod
+              only: master
+
