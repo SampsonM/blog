@@ -18,8 +18,7 @@ jobs:
 
       - run:
           name: BUILD - App
-          command: |
-             npm run build
+          command: npm run build
 
       - run:
           name: DEPLOY - App
