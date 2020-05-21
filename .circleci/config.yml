@@ -20,10 +20,6 @@ jobs:
           name: BUILD - App
           command: npm run build
 
-      - run:
-          name: DEPLOY - App
-          command: npm run deploy
-
 workflows:
   deploy-blog:
     jobs:
