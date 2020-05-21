@@ -26,7 +26,10 @@ jobs:
           command: npm run build
       - run:
           name: DEPLOY - App
-          command: npm run deploy
+          command: |
+              git config user.email $GITHUB_EMAIL
+              git config user.name $GITHUB_USERNAME
+              npm run deploy
 
 workflows:
   deploy-blog:
