@@ -14,7 +14,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - 30:34:0c:22:0b:7d:5e:8b:15:dd:32:d4:dc:26:fd:a7
+            - 6f:f9:5c:37:e6:e3:10:a5:10:8a:4c:8d:ec:93:5e:43
       - run:
           name: ECHO BRANCH
           command: echo $(git branch)
