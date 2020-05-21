@@ -31,4 +31,4 @@ workflows:
       - deploy-ui:
           filters:
             branches:
-              only: master
+              only: prod
