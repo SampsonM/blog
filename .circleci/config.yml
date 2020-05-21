@@ -28,7 +28,7 @@ jobs:
 workflows:
   deploy-blog:
     jobs:
-      - deploy-ui
+      - deploy-ui:
           filters:
             branches:
               only: master
