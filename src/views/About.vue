@@ -23,10 +23,10 @@
             class="about__link">working</a>
            at 
           <a
-            href="https://www.moneysupermarket.com"
+            href="https://www.bjss.com"
             target="blank"
-            class="about__link">Moneysupermarket</a> 
-          using VueJS & Typescript to build out new products and optimize existing ones.
+            class="about__link">BJSS</a> 
+          helping clients build modern sustainable web solutions.
           In my spare time I enjoy trying out different tech within personal projects and playing the guitar.
         </p>
 
