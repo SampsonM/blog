@@ -4,7 +4,7 @@
       <div class="about__title-container">
         <h1 class="about__title">
           Mark Sampson,
-          <br />Front End Developer
+          <br />Software Developer
         </h1>
 
         <span class="about__back">
@@ -23,9 +23,9 @@
             class="about__link">working</a>
            at 
           <a
-            href="https://www.bjss.com"
+            href="https://www.booking.com"
             target="blank"
-            class="about__link">BJSS</a> 
+            class="about__link">Booking.com</a> 
           helping clients build modern sustainable web solutions.
           In my spare time I enjoy trying out different tech within personal projects and playing the guitar.
         </p>
@@ -37,8 +37,8 @@
         </p>
 
         <p class="about__text-left">
-          My personal successes including adding Lighthouse tests to our 
-          Jenkins build pipelines to improve accessibility and performance, 
+          My personal successes include adding Lighthouse tests to 
+          Jenkins build pipelines to highlight accessibility flaws and monitor page performance, 
           and building a validation framework for a new Energy Autoswitching product.
         </p>
       </div>

@@ -8,7 +8,7 @@ n<template>
 			</router-link>
 
 			<!-- programatically render list of blog posts -->
-			<template v-if="blogs.length">
+			<template>
 				<section
 					v-for="(blog, i) in blogs"
 					:class="[
@@ -38,10 +38,6 @@ n<template>
 
 				</section>
 			</template>
-
-			<h2 v-else>
-				Coming Soon.
-			</h2>
 		</section>
 	</transition>
 </template>
