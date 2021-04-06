@@ -2,13 +2,13 @@
 
 __Published: *21 May 2020*__
 
-I'd like to write something profound here about how I decided to use <a href="https://CircleCI.com/docs/2.0/migrating-from-jenkins/" target="blank">CircleCI</a> because of the improved parallelism, or the existance of built in support for Docker compared to Jenkins...
+I'd like to write something profound here about how I decided to use <a href="https://CircleCI.com/docs/2.0/migrating-from-jenkins/" target="blank">CircleCI</a> because of the improved parallelism, or the existence of built in support for Docker compared to Jenkins...
 
 But as it goes I use Jenkins daily so I thought it would be a nice change.
 
 After some meddling though, inspecting the CircleCI GUI and reading the <a href="https://CircleCI.com/docs/2.0/configuration-reference/#section=configuration" target="blank">docs</a>, I actually really like it.
 
-It was easy to set up, the GUI is super intuitive and the docs are relatively straight forwards. The lack of stackoverflow questions related to CircleCI must count for something? <i>(or maybe they just exist in their forums instead?)</i>
+It was easy to set up, the GUI is super intuitive and the docs are relatively straight forwards. The lack of Stackoverflow questions related to CircleCI must count for something? <i>(or maybe they just exist in their forums instead?)</i>
 
 
 ## So how easy is it to set up?
@@ -111,14 +111,14 @@ jobs:
   deploy-ui:
     executor: node-12-executor
     steps:
-      # CircleCI is linked to your repo so it knows to checkout your repo! equivalant of - git clone <YOUR_REPO>
+      # CircleCI is linked to your repo so it knows to checkout your repo! equivalent of - git clone <YOUR_REPO>
       - checkout
 
       # run is used to invoke command-line programs
       - run:
           # Selected name will appear in the CircleCI pipeline GUI
           name: INSTALL - dependencies
-          # working_directory is the equivalant of "cd ./app", if you need to cd into a
+          # working_directory is the equivalent of "cd ./app", if you need to cd into a
           # folder in your repo do it here or in the command section
           working_directory: ./app
           # bash command you want to run
@@ -187,10 +187,10 @@ jobs:
 
 ## I have numerous installs now my config is huge?!
 
-Create a command and paramterise your caching steps!
+Create a command and parameterize your caching steps!
 
 Commands are great, they are similar to orbs except they live within your config.
-You can parameterise them and reuse them wherever you need.
+You can parameterize them and reuse them wherever you need.
 
 Doing so will reduce the size of you config and improve readability.
 
@@ -198,7 +198,7 @@ Doing so will reduce the size of you config and improve readability.
 ```yaml
 commands:
   restore-save-cache:
-    description: "Save and retore cache"
+    description: "Save and restore cache"
     parameters:
       checksumFile:
         type: string
