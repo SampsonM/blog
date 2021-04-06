@@ -5,34 +5,25 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const RootState: RootState = {
-	isMenuOpen: true,
+	isMenuOpen: false,
 	isAboutOpen: false,
-	isBlogOpen: false,
-	isPortfolioOpen: false
+	isBlogOpen: false
 }
 
 const mutations: MutationType = {
-	TOGGLE_MENU(state) {
-		state.isMenuOpen = !state.isMenuOpen
+	TOGGLE_MENU(state, payload) {
+		state.isMenuOpen = payload
 	},
 	TOGGLE_ABOUT(state) {
 		state.isAboutOpen = !state.isAboutOpen
 	},
 	TOGGLE_BLOG(state) {
 		state.isBlogOpen = !state.isBlogOpen
-	},
-	TOGGLE_PORTFOLIO(state) {
-		state.isPortfolioOpen = !state.isPortfolioOpen
 	}
 }
 
 const actions: ActionType = {
-	toggleMenu({ commit }, payload) {
-		commit('TOGGLE_MENU')
-		if (payload) {
-			commit(`TOGGLE_${payload.toUpperCase()}`)
-		}
-	}
+	toggleMenu({ commit }, payload) { /* yet to be implemented */ }
 }
 
 export default new Vuex.Store({

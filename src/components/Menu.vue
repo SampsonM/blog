@@ -35,8 +35,8 @@ export default class Menu extends Vue {
 	@Action private toggleMenu: any
 
 	private menuItems: string[] = [
-		'About',
-		'Blog'
+		'about',
+		'blog'
 	]
 }
 </script>

@@ -1,14 +1,16 @@
-n<template>
+<template>
 	<transition appear name="blog" mode="in-out">
 		<section class="blog">
 			<h1 class="blog__title">Blog</h1>
 
-			<router-link to="/" class="blog__back">
+			<router-link 
+				:to="$router.currentRoute.path == `/blog` ? '/' : `/blog`" 
+				class="blog__back">
 				<arrow-up-bold-box></arrow-up-bold-box>
 			</router-link>
 
 			<!-- programatically render list of blog posts -->
-			<template v-if="blogs.length">
+			<template>
 				<section
 					v-for="(blog, i) in blogs"
 					:class="[
@@ -17,41 +19,38 @@ n<template>
 					]"
 					:key="i">
 
-					<button
+					<router-link 
+						:to="$router.currentRoute.path == `/blog/${blog.url}` ? '/blog' : `/blog/${blog.url}`"
 						:class="[
 							'blog__toggle',
 							{ 'blog__toggle--dimmed' : (!blogStatus[`${blog.name}Open`] && anyBlogOpen)}
 						]"
-						@click="openBlog(blog.name)">
+					>
 						{{ blog.title }}
-						<arrow-expand-vertical class="blog__toggle-arrow">
-						</arrow-expand-vertical>
-					</button>
+						<arrow-expand-vertical class="blog__toggle-arrow"></arrow-expand-vertical>
+					</router-link>
+
 
 					<transition appear name="fade" mode="in-out">
 						<component
 							v-if="blogStatus[`${blog.name}Open`]"
 							class="blog__post"
-							:is="`${blog.componentName}`">
+							:is="blog.componentName">
 						</component>
 					</transition>
 
 				</section>
 			</template>
-
-			<h2 v-else>
-				Coming Soon.
-			</h2>
 		</section>
 	</transition>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue, Watch } from 'vue-property-decorator'
 import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 import ArrowExpandVertical from 'vue-material-design-icons/ArrowExpandVertical.vue'
 import Blogs from '../static/blogs'
-import { BlogInfo } from '../types'
+import { BlogInfo } from '@/types'
 
 function markdownComponents() {
 	return Blogs.reduce((acc: any, blog: BlogInfo) => {
@@ -74,20 +73,27 @@ interface BlogStatus {
 export default class Blog extends Vue {
 	private blogs: BlogInfo[] = Blogs
 	private blogStatus: BlogStatus = {}
+	private anyBlogOpen: boolean = false
 
-	private	get anyBlogOpen(): boolean {
-		const blogKeys = Object.keys(this.blogStatus)
-		const blogsOpen = blogKeys.filter((blogKey) => this.blogStatus[blogKey] === true).length
-		return blogsOpen > 0
-	}
-
-	private openBlog(name: string): void {
-		this.blogStatus[`${name}Open`] = !this.blogStatus[`${name}Open`]
+	@Watch('$route', { immediate: true, deep: true })
+	private onUrlChange() {
+		this.updateBlogStatus()
 	}
 
 	private created(): void {
-		this.blogs.forEach((blog) => {
-			Vue.set(this.blogStatus, `${blog.name}Open`, false)
+		this.updateBlogStatus()
+	}
+
+	private updateBlogStatus(): void {
+		Vue.set(this, 'anyBlogOpen', false)
+
+		this.blogs.forEach((blog: BlogInfo) => {
+			if (blog.componentName === this.$router.currentRoute.meta.blogComponentName) {
+				Vue.set(this, 'anyBlogOpen', true)
+				Vue.set(this.blogStatus, `${blog.name}Open`, true)
+			} else {
+				Vue.set(this.blogStatus, `${blog.name}Open`, false)
+			}
 		})
 	}
 }
@@ -263,6 +269,7 @@ export default class Blog extends Vue {
 		padding: 5px 5px 1px 5px;
 		margin-bottom: 10px;
 		display: flex;
+		width: fit-content;
 		align-items: flex-start;
 		transition: opacity 0.2s ease-in;
 
