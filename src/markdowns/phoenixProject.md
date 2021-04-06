@@ -19,9 +19,9 @@ If you've not read this, and you enjoy getting your socks blown off... this prob
 
 Most tech books end up being used as a sleeping pill, but the hints of sarcasm and sly jabs about Sarah keep this book interesting.
 
-It follows Bill as he and his company try to turn the iceberg around to an inevitable happy ending, with the help of the clever cookie Erik.
+It follows Bill as he and his company try to turn the iceberg around to an inevitable happy ending.
 
-Bill manages to change the way the company handles tech in-house with the help of Erik by learning [The Three Ways.](https://www.accenture.com/us-en/blogs/software-engineering-blog/quaresma-three-ways-of-devops")
+With the help of the clever cookie Erik, Bill manages to change the way the company handles tech in-house with the help of Erik by learning [The Three Ways.](https://www.accenture.com/us-en/blogs/software-engineering-blog/quaresma-three-ways-of-devops") and by fostering a DevOps culture.
 
 #### The three ways
 
@@ -29,14 +29,14 @@ Bill manages to change the way the company handles tech in-house with the help o
 - Use fast feedback loops as close to the source as possible using quality gates, "stopping the production line" when our builds and tests fail
 - Build a culture of experimentation and discovery, and share these learnings within the community
 
-Now there are plenty of deep dives into the three ways, DevOps and The Phoenix Project and if you've read the book you already know about these. 
+Now there are plenty of deep dives into the three ways, DevOps and The Phoenix Project and if you've read this book you already know about these. 
 
 So, why continue reading? Well you may want to read what I have to say... sounds absurd to me but here we are.
 
 #
 ## The Point
 
-The key takeaway for me was how the flow of software work is no different to any physical product.
+The key takeaway for me was how the flow of software work is no different to any physical production line.
 
 It helped me visualize what is happening from product inception to our work being loaded by Mr Jenkins into a van and delivered to the user.
 
@@ -44,32 +44,34 @@ In the book Erik takes Bill up to a galley in one of the company's factory produ
 
 The production line flow from left to right instantly reminded me of a KanBan board, from the inception of an idea to the infrastructure that deploys the code to the user.
 
-With that visualization in mind I can now imagine how breaking work into smaller testable chunks can improve concurrency and reduce delivery times. 
-I can picture smaller physical tasks relating to CI/CD to provide fast feedback loops.
+With that visualization in mind I now understand how breaking work into smaller testable chunks can improve concurrency and improve delivery/cycle times. 
+I can relate smaller physical tasks to software user stories and using CI/CD to provide fast feedback loops.
 
 Most importantly for me, I can now picture how problems arise due to lack of communication across job roles. I can relate experience in previous industries to the SDLC.
 
 One thing I've noticed from previous industries I've worked in is that nobody was ever angry after being told a task will take longer than expected, but in the forward thinking software industry people always tend to push their self to meet deadlines as though they may lose their jobs!
 
-It could be ego, or it could be a lack of confidence to say "we might have been off with our estimates". But having the confidence to say, "I don't know", will help people make changes to scope, deadlines or manpower. 
+It could be ego, or it could be a lack of confidence to say "we might have been off with our estimates". But having the confidence to say, "I don't know", will help people make changes to scope, deadlines or manpower and keep a company delivering working software. 
 
-Being open about expectations is part of the feedback loop to keep estimates correct and projects on time.
+Being open honest expectations is part of the feedback loop to keep estimates correct and projects on time.
 
 
 ## Other points
 
-People take different things from books and interpret them in their own way, and this is what I remember when I think about The Phoenix Project.
+People take different things from books and interpret them in their own way, and this is simply what I remember when I think about The Phoenix Project.
 
-However you interpret it, there are some points in this book that I think aren't really debatable but are worth mentioning.
+However you interpret it though there are some points in this book that I think aren't really debatable but are worth mentioning.
 
 - The longer the product development cycle, the longer the company capital is locked up 
     - *keep stories small, and project estimates accurate*
 - Any improvements made anywhere besides the bottleneck are an illusion 
-    - *Unblocking your developers whilst QA are still full of work won't improve delivery*
+    - *Unblocking your developers whilst QA are still full of work won't improve cycle times, so find those bottlenecks!*
 - Perfection is the enemy of good
-    - *Knowing when to stop smoothing the surface of your swimming pool is important, nobody will ever notice it anyway*
+    - *Knowing when to stop smoothing the surface of your swimming pool floor is important, nobody will ever notice it anyway*
 
 
 These points are most likely debatable in some way but what isn't!
 
-Either way hopefully I have convinced you to read the book or helped you in some way.
+Either way hopefully I have convinced you to read the book or made you think about it in a different way.
+
+If not then maybe the other articles may be useful...
