@@ -1,4 +1,4 @@
-# CircleCI setup for a front end app!
+# CircleCI setup for a front end app
 
 __Published: *21 May 2020*__
 

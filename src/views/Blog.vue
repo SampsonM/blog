@@ -21,10 +21,7 @@
 
 					<router-link 
 						:to="$router.currentRoute.path == `/blog/${blog.url}` ? '/blog' : `/blog/${blog.url}`"
-						:class="[
-							'blog__toggle',
-							{ 'blog__toggle--dimmed' : (!blogStatus[`${blog.name}Open`] && anyBlogOpen)}
-						]"
+						class="blog__toggle"
 					>
 						{{ blog.title }}
 						<arrow-expand-vertical class="blog__toggle-arrow"></arrow-expand-vertical>
@@ -32,11 +29,14 @@
 
 
 					<transition appear name="fade" mode="in-out">
+
+
 						<component
 							v-if="blogStatus[`${blog.name}Open`]"
 							class="blog__post"
 							:is="blog.componentName">
 						</component>
+
 					</transition>
 
 				</section>
@@ -139,14 +139,13 @@ export default class Blog extends Vue {
 	}
 
 	&__container {
-		max-height: 0;
-		min-height: 40px;
+		height: auto;
 		margin-bottom: 10px;
-		transition: max-height 0.25s ease-out;
+		transition: height 0.25s ease-out;
 
 		&--open {
-			transition: max-height 0.45s ease-out;
-			max-height: 1000px;
+			transition: height 0.45s ease-out;
+			height: fit-content;
 		}
 	}
 
@@ -274,7 +273,7 @@ export default class Blog extends Vue {
 		transition: opacity 0.2s ease-in;
 
 		&--dimmed {
-			transition: opacity 2s cubic-bezier(.64,0,.79,.46);
+			transition: opacity 0.75s cubic-bezier(.64,0,.79,.46);
 			opacity: 0.2;
 		}
 
