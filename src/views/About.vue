@@ -26,8 +26,8 @@
             href="https://www.booking.com"
             target="blank"
             class="about__link">Booking.com</a> 
-          helping clients build modern sustainable web solutions.
-          In my spare time I enjoy trying out different tech within personal projects and playing the guitar.
+          building modern sustainable web solutions.
+          In my spare time I enjoy trying out different tech within personal projects, playing the guitar, mountain biking and rushing to meet Open University deadlines.
         </p>
 
         <p class="about__text-right">
@@ -39,7 +39,7 @@
         <p class="about__text-left">
           My personal successes include adding Lighthouse tests to 
           Jenkins build pipelines to highlight accessibility flaws and monitor page performance, 
-          and building a validation framework for a new Energy Autoswitching product.
+          and building an in-house form validation framework for Vue and TypeScript.
         </p>
       </div>
     </section>
@@ -48,7 +48,6 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import { State, Action } from 'vuex-class'
 import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 
 @Component({
@@ -57,8 +56,6 @@ import ArrowUpBoldBox from 'vue-material-design-icons/ArrowUpBoldBox.vue'
 	}
 })
 export default class About extends Vue {
-	@State private isAboutOpen!: boolean
-	@Action private toggleMenu: any
 }
 </script>
 

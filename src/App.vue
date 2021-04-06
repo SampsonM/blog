@@ -6,23 +6,37 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from 'vue-property-decorator'
-import { State, Action } from 'vuex-class'
-import { RgbStartStopValues } from './types'
+import { State, Action, Mutation } from 'vuex-class'
 
 @Component
 export default class App extends Vue {
 	@State private isMenuOpen!: boolean
 	@Action private toggleMenu: any
+	@Mutation private TOGGLE_MENU: any
 
 	private created(): void {
-		if (window.location.href.split('/')[3] !== '' && this.isMenuOpen) {
-			this.toggleMenu()
+		// if page opens on main menu, show the border
+		if (window.location.href.split('/')[3] === '') {
+			this.TOGGLE_MENU(true)
 		}
 
-		this.$router.beforeEach((to, from, next) => {
-			const pageLeft = from.path.split('/')[1]
-			this.toggleMenu(pageLeft)
+		this.$router.beforeEach((to, from, next): void => {
+			const pageTo = to.path.split('/')[1]
+
+			switch (pageTo.toLowerCase()) {
+				case '':
+					this.TOGGLE_MENU(true)
+					break
+				case 'blog':
+					this.TOGGLE_MENU(false)
+					break
+				case 'about':
+					this.TOGGLE_MENU(false)
+					break
+			}
+
 			next()
+
 		})
 	}
 }
