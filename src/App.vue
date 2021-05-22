@@ -69,4 +69,15 @@ export default class App extends Vue {
   background-position:0% 100%;
   border-width: 0;
 }
+
+.reactive-img {
+	width: 100%;
+}
+
+@include desktop {
+	.reactive-img {
+		width: auto;
+		height: 320px;
+	}
+}
 </style>

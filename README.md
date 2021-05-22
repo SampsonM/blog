@@ -35,7 +35,8 @@ export default [
 	{
 		name: string, 				// Name of markdown file
 		componentName: string,		// Lowercase name referenced in template
-		title: string				// Blog title refrenced in blog list
+		title: string,				// Blog title referenced in blog list
+    url: string           // URL to be shown in url abr
 	}
 ]
 ```
