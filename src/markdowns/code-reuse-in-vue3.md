@@ -45,7 +45,7 @@ In the following code example we can see two mixins are passed to our App compon
 
 Vue wouldn't know which mixin to take the "update" method from and throws an error.
 
-It's also unclear which mixin the "update" function came from, which would mean having to investigate the mixin source code and who can actually be fussed to do this?! A developer shouldn't have to read the source code of every mixin they consume to figure out the origin of a method or computed property, it should be obvious!
+It's also unclear to developers which mixin the "update" function came from, which would mean having to investigate the mixin source code and who can actually be fussed to do this?! A developer shouldn't have to read the source code of every mixin they consume to figure out the origin of a method or computed property, it should be obvious!
  
 <img src="/img/vue2-mixin-example.png"
      alt="vue2 mixin example"
