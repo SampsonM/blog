@@ -41,7 +41,7 @@ As scoped-slots are a less-used solution for the code reuse problem, I will focu
 
 ### Mixins
 
-In the following code example we can see two mixins are passed to our App component, lets assume they were authored by two different developers. The two mixins have "update" methods, so when a consumer of the mixins uses the both mixins together they would get a naming collision.
+In the following code example we can see two mixins are passed to our App component, lets assume they were authored by two different developers. The two mixins have "update" methods, so when a consumer of the mixins uses both mixins together they would get a naming collision.
 
 Vue wouldn't know which mixin to take the "update" method from and throws an error.
 
