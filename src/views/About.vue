@@ -31,12 +31,17 @@
         </p>
 
         <p class="about__text-right">
-          I'm comfortable building F/E apps using vanillaJS/TS, Vue and React, and use TDD in professional settings.
-          I have experience building databases with MongoDB, MLab and AWS, and have built CICD pipelines using 
+          I'm comfortable building F/E apps using vanillaJS/TS, Vue and React, and use XP practices such as TDD where practical.
+          I have experience building simple databases with MongoDB, MLab and AWS, and have built CICD pipelines using 
           Jenkins to automate test, build and deployment processes.
         </p>
-
+        
         <p class="about__text-left">
+          Passionate about learning and sharing knowledge I have ran sessions to teach basic coding principles with Whalley Range Girls School and The Princes Trust, 
+           mentored tech returners at Booking.com and ran 1-2-1 sessions with junior developers on the fundementals of JavaScript.
+        </p>
+
+        <p class="about__text-right">
           My personal successes include adding Lighthouse tests to 
           Jenkins build pipelines to highlight accessibility flaws and monitor page performance, 
           and building an in-house form validation framework for Vue and TypeScript.
