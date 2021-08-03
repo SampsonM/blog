@@ -18,22 +18,20 @@
         <p class="about__text-left">
           Currently 
           <a
-            href="https://www.linkedin.com/in/mark-sampson-33995bb9/"
+            href="https://www.linkedin.com/in/mark-sampson-software-developer/"
             target="blank"
             class="about__link">working</a>
-           at 
-          <a
-            href="https://www.booking.com"
-            target="blank"
-            class="about__link">Booking.com</a> 
-          building modern sustainable web solutions.
+           as a contract software developer building modern sustainable web solutions.
           In my spare time I enjoy trying out different tech within personal projects, playing the guitar, mountain biking and rushing to meet Open University deadlines.
         </p>
 
         <p class="about__text-right">
-          I'm comfortable building F/E apps using vanillaJS/TS, Vue and React, and use XP practices such as TDD where practical.
-          I have experience building simple databases with MongoDB, MLab and AWS, and have built CICD pipelines using 
-          Jenkins to automate test, build and deployment processes.
+          Unafraid to get involved with any part of the stack I'm comfortable building web apps using vanillaJS/TS, Vue and React, and use XP practices such as TDD where practical.
+          I have experience building simple databases with MongoDB, MLab and AWS, and have built 
+          <a
+            href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment"
+            target="blank"
+            class="about__link">CI/CD</a> pipelines using Jenkins and Azure pipelines to automate test, build and deployment processes.
         </p>
         
         <p class="about__text-left">
